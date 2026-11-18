@@ -43,7 +43,7 @@ export function panels(W, H) {
   const none = { x: -9, y: -9, w: 0, h: 0 };
   if (W <= MOBILE_W) return { left: none, right: none, top: { x: 0, y: 0, w: W, h: 44 }, free: { x0: 2, x1: W - 2, y0: 48, y1: H - 6 } }; // スマホ：欄は3Dの下に並ぶ
   const lw = clamp(320, W * 0.25, 400), lh = clamp(300, H * 0.4, 420), m = 14, rw = 320;
-  return { left: { x: m, y: H - m - lh, w: lw, h: lh }, right: { x: W - m - rw, y: m, w: rw, h: H - m * 2 }, top: { x: (W - rw) / 2 - 330, y: m, w: 660, h: 58 },
+  return { left: { x: m, y: H - m - lh, w: lw, h: lh }, right: { x: W - m - rw, y: m, w: rw, h: H - m * 2 }, top: { x: (W - rw) / 2 - 450, y: m, w: 900, h: 58 },
     free: { x0: 6, x1: W - rw - m * 2, y0: 74, y1: H - 30 } };
 }
 export const hit = (a, b, pad = 0) => a.x < b.x + b.w + pad && b.x < a.x + a.w + pad && a.y < b.y + b.h + pad && b.y < a.y + a.h + pad;
